@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Product Section -->
+  <div class="max-w-4xl mx-auto py-12 px-4 grid md:grid-cols-2 gap-8">
+    <!-- Product Image Gallery -->
+    <div>
+      <img id="mainImage" src="S24.png.webp" alt="S24_Ultra_Banner" class="w-full rounded-lg shadow-md mb-4">
+      <div class="flex space-x-2">
+        <img src="S24thum1.png" alt="Thumb" class="w-16 cursor-pointer border-2 border-blue-500" onclick="changeImage(this.src)">
+        <img src="S24thum2.png" alt="Thumb" class="w-16 cursor-pointer" onclick="changeImage(this.src)">
+        <img src="S24thum3.png" alt="Thumb" class="w-16 cursor-pointer" onclick="changeImage(this.src)">
+      </div>
+    </div>
+
+    <!-- Product Info -->
+    <div>
+      <h1 class="text-3xl font-bold mb-2">Stylish Phone</h1>
+      <p class="text-lg text-gray-600 mb-4">Comfortable, trendy phones perfect for everyone.</p>
+      <p class="text-2xl font-semibold text-blue-600 mb-4">$1400.10</p>
+
+      <!-- Variant Selection -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Choose colour:</label>
+        <select class="w-full p-2 border rounded">
+          <option>TitaniumGrey</option>
+          <option>Titanium black</option>
+          <option>Titanium yellow</option>
+        </select>
+      </div>
+
+      <!-- Add to Cart Button -->
+      <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Add to Cart</button>
+
+      <!-- Reviews -->
+      <div class="mt-6">
+        <h2 class="text-xl font-semibold mb-2">Customer Reviews</h2>
+        <div class="bg-white p-4 rounded shadow mb-2">
+          <p class="text-sm">⭐️⭐️⭐️⭐️⭐️ - "These phones are amazing! Super comfy and stylish."</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <p class="text-sm">⭐️⭐️⭐️⭐️ - "Great value for the price. I used them every day."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function changeImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
+</body>
+</html>
